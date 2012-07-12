@@ -1,0 +1,9 @@
+{{#with view.contact}}
+    {{view Ember.TextField valueBinding="first_name" placeholder="First name"}}
+    {{view Ember.TextField valueBinding="last_name"  placeholder="Last name"}}
+    {{view Ember.TextField valueBinding="email"  placeholder="EMail"}}
+    <button type="submit">
+        {{#if isNew}}Create{{else}}Update{{/if}}
+    </button>
+{{/with}}
+<a href="#" {{action "cancel"}}>Cancel</a>

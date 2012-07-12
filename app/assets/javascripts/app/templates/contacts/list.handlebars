@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>EMail</th>
+    </tr>
+    {{#each view.content}}
+    {{view App.ShowContactView contactBinding="this"}}
+    {{/each}}
+    {{#if view.isNewVisible}}
+    <tr>
+        <td colspan="3">
+            {{view App.NewContactView contentBinding="this"}}
+        </td>
+    </tr>
+    {{/if}}
+</table>
+
+<a href="#" {{action "showNew"}}>New Contact</a>
